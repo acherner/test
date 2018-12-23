@@ -20,7 +20,9 @@ public class CaptureVideoStream {
 
     static {
         try {
-            System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
+            System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
+
+            //System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
         } catch (UnsatisfiedLinkError e) {
             System.err.println("Native code library failed to load.\n" + e);
             System.exit(1);

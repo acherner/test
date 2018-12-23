@@ -13,7 +13,8 @@ public class PlayVideo {
 
     static {
         try {
-            System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
+            System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
+            //System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
         } catch (UnsatisfiedLinkError e) {
             System.err.println("Native code library failed to load.\n" + e);
             System.exit(1);
@@ -28,8 +29,8 @@ public class PlayVideo {
         Mat frame = new Mat();
 
         //Create new VideoCapture object
-        VideoCapture camera = new VideoCapture("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\Megamind.avi");
-
+        //VideoCapture camera = new VideoCapture("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\Megamind.avi");
+        VideoCapture camera = new VideoCapture("/Users/natan/IdeaProjects/test/video_receiver/src/main/resources/Megamind.avi");
         //Create new JFrame object
         JFrame jframe = new JFrame("Video Title");
 

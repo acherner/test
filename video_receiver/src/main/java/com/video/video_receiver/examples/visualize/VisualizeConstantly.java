@@ -10,9 +10,11 @@ import org.opencv.imgproc.Imgproc;
 //https://docs.opencv.org/master/d5/d98/tutorial_mat_operations.html
 public class VisualizeConstantly {
     public static void main(String[] args) {
-        System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
+        //System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
 
-        Mat img = Imgcodecs.imread("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\image.jpg");
+        System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
+        //Mat img = Imgcodecs.imread("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\image.jpg");
+        Mat img = Imgcodecs.imread("/Users/natan/IdeaProjects/test/video_receiver/src/main/resources/image.jpg");
         Mat grey = new Mat();
         Imgproc.cvtColor(img, grey, Imgproc.COLOR_BGR2GRAY);//Conversion from color to greyscale:
         Mat sobelx = new Mat();
