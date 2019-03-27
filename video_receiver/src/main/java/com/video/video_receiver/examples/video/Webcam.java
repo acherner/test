@@ -9,15 +9,15 @@ import javax.swing.*;
 
 import static com.video.video_receiver.examples.video.PlayVideo.Mat2BufferedImage;
 
+/**
+ * opens the webcam and captures one frame from video feed
+ */
 public class Webcam {
 
     public static void main (String args[]){
 
         System.out.println("Hello, OpenCV");
-        // Load the native library.
-        System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
-        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        //System.loadLibrary("opencv_java244");
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         VideoCapture camera = new VideoCapture(0);
         try {
@@ -35,10 +35,10 @@ public class Webcam {
 
         Mat frame = new Mat();
 
-        //camera.grab();
-        //System.out.println("Frame Grabbed");
-        //camera.retrieve(frame);
-        //System.out.println("Frame Decoded");
+        camera.grab();
+        System.out.println("Frame Grabbed");
+        camera.retrieve(frame);
+        System.out.println("Frame Decoded");
 
         camera.read(frame);
         System.out.println("Frame Obtained");
@@ -50,7 +50,7 @@ public class Webcam {
         System.out.println("Captured Frame Width " + frame.width());
 
         HighGui.imshow("camera.jpg", frame);
-        //HighGui.waitKey();
+        HighGui.waitKey();
 
         JFrame jframe = new JFrame("Video Title");
 

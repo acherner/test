@@ -23,7 +23,8 @@ public class PlayVideo {
 
     public static void main(String[] args)
     {
-        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        //System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
 
         //Create new MAT object
         Mat frame = new Mat();

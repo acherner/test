@@ -6,16 +6,30 @@ import org.opencv.core.Mat;
 import org.opencv.highgui.HighGui;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
+import org.springframework.core.io.ClassPathResource;
 
+import java.io.File;
+import java.io.IOException;
+
+/**
+ * image converted to scale gray
+ */
 //https://docs.opencv.org/master/d5/d98/tutorial_mat_operations.html
 public class VisualizeConstantly {
     public static void main(String[] args) {
-        //System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
 
-        System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
-        //Mat img = Imgcodecs.imread("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\image.jpg");
-        Mat img = Imgcodecs.imread("/Users/natan/IdeaProjects/test/video_receiver/src/main/resources/image.jpg");
-        Mat grey = new Mat();
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        File resource = null;
+        try {
+            resource = new ClassPathResource(
+                    "image.jpg").getFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String path = resource.getAbsolutePath();
+        Mat img = Imgcodecs.imread(path);
+
+        Mat grey = Imgcodecs.imread(path);
         Imgproc.cvtColor(img, grey, Imgproc.COLOR_BGR2GRAY);//Conversion from color to greyscale:
         Mat sobelx = new Mat();
         Imgproc.Sobel(grey, sobelx, CvType.CV_32F, 1, 0);
