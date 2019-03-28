@@ -9,12 +9,16 @@ import java.awt.image.DataBufferByte;
 import javax.swing.*;
 
 
+/**
+ * grabs the frames from video and plays them,
+ * experimental sleep added to achieve fps close to original video fps
+ */
 public class PlayVideo {
 
     static {
         try {
-            System.load("/usr/local/Cellar/opencv/3.4.3_2/share/OpenCV/java/libopencv_java343.dylib");
-            //System.load( "C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\opencsv342\\opencv\\build\\java\\x64\\opencv_java342.dll" );
+            System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+
         } catch (UnsatisfiedLinkError e) {
             System.err.println("Native code library failed to load.\n" + e);
             System.exit(1);
@@ -31,7 +35,7 @@ public class PlayVideo {
 
         //Create new VideoCapture object
         //VideoCapture camera = new VideoCapture("C:\\Users\\anatolyc\\IdeaProjects\\mgenie code\\test\\video_receiver\\src\\main\\resources\\Megamind.avi");
-        VideoCapture camera = new VideoCapture("/Users/natan/IdeaProjects/test/video_receiver/src/main/resources/Megamind.avi");
+        VideoCapture camera = new VideoCapture("/Users/natan/IdeaProjects/test/video_receiver/src/main/resources/Vince Staples - Norf Norf (Explicit) (720p).mp4");
         //Create new JFrame object
         JFrame jframe = new JFrame("Video Title");
 
@@ -58,6 +62,15 @@ public class PlayVideo {
                 //Update the image in the vidPanel
                 vidPanel.setIcon(image);
                 //Update the vidPanel in the JFrame
+
+                //sleep to solve framerate issue,
+                //40 is for 25 fps
+                try {
+                    Thread.sleep(33);//30 fps
+                    //Thread.sleep(140);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 vidPanel.repaint();
 
             }
