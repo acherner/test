@@ -75,7 +75,7 @@ public class CaptureVideoStream {
 
         ////////////////////////////////////////////////////////////
         /// start button
-        webSource = new VideoCapture(1);
+        webSource = new VideoCapture(0);
 
         myThread = new DaemonThread();
 
