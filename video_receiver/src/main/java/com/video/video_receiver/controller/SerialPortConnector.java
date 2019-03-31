@@ -5,11 +5,11 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Component;
 
 //@Log4j
-@Component
-public class SerialPortConnector extends AbstractSpringSerialPortConnector {
-
-    @Override
-    public void processData(String s) {
-        System.out.println("s = [" + s + "]");
-    }
-}
+//@Component
+//public class SerialPortConnector extends AbstractSpringSerialPortConnector {
+//
+//    @Override
+//    public void processData(String s) {
+//        System.out.println("s = [" + s + "]");
+//    }
+//}
