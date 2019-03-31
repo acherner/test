@@ -8,6 +8,19 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://H:/Program Files/mfz-rxtx-2.2-20081207-win-x64" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://H:/Program Files/mfz-rxtx-2.2-20081207-win-x64" />
+        </NATIVE>
+        <SOURCES />
+        <jarDirectory url="file://H:/Program Files/mfz-rxtx-2.2-20081207-win-x64" recursive="false" />
+      </library>
+    </orderEntry>
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.1.RELEASE" level="project" />
@@ -52,5 +65,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.security:spring-security-test:5.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-configuration-processor:2.1.1.RELEASE" level="project" />
   </component>
 </module>

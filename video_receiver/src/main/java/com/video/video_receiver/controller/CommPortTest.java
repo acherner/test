@@ -3,6 +3,9 @@ package com.video.video_receiver.controller;
 import gnu.io.*;
 import java.util.Enumeration;
 
+/**
+ * checks if can read from RS232 for s port
+ */
 public class CommPortTest {
 
     public static void main(String[] args) {

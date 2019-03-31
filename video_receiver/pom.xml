@@ -50,6 +50,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.diegosep</groupId>
+            <artifactId>spring-serial-port-connector</artifactId>
+            <version>0.0.1-RELEASE</version>
+        </dependency>
+
         <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.opencv/openCVLibrary &ndash;&gt;-->
         <!--<dependency>-->
             <!--<groupId>org.opencv</groupId>-->
@@ -65,11 +71,11 @@
         <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.rxtx/rxtx -->
-        <dependency>
-            <groupId>org.rxtx</groupId>
-            <artifactId>rxtx</artifactId>
-            <version>2.1.7</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.rxtx</groupId>-->
+            <!--<artifactId>rxtx</artifactId>-->
+            <!--<version>2.1.7</version>-->
+        <!--</dependency>-->
 
 
     </dependencies>
